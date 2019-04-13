@@ -18,17 +18,17 @@ import com.google.common.base.Optional;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
-import com.svetanis.ood.onlinereader.library.LibraryService;
+import com.svetanis.ood.onlinereader.catalog.CatalogService;
 import com.svetanis.ood.onlinereader.model.Author;
 import com.svetanis.ood.onlinereader.model.Book;
 
 public final class DefaultSearchService implements SearchService {
 
-  public DefaultSearchService(LibraryService library) {
+  public DefaultSearchService(CatalogService library) {
     this.library = checkNotNull(library, "library");
   }
 
-  private final LibraryService library;
+  private final CatalogService library;
 
   @Override
   public Optional<Book> search(String title) {
@@ -51,7 +51,7 @@ public final class DefaultSearchService implements SearchService {
     return newList(library.getAll(keys).values());
   }
 
-  private ImmutableList<Book> getAll(LibraryService library) {
+  private ImmutableList<Book> getAll(CatalogService library) {
     return newList(library.getAll().values());
   }
 }

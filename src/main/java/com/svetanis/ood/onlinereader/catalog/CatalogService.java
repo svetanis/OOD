@@ -1,9 +1,9 @@
-package com.svetanis.ood.onlinereader.library;
+package com.svetanis.ood.onlinereader.catalog;
 
 import com.google.common.collect.ImmutableMap;
 import com.svetanis.ood.onlinereader.model.Book;
 
-public interface LibraryService {
+public interface CatalogService {
 
   Book get(String key);
 

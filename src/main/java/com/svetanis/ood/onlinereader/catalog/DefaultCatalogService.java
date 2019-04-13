@@ -1,4 +1,4 @@
-package com.svetanis.ood.onlinereader.library;
+package com.svetanis.ood.onlinereader.catalog;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -6,9 +6,9 @@ import com.google.common.collect.ImmutableMap;
 import com.svetanis.java.base.dao.Dao;
 import com.svetanis.ood.onlinereader.model.Book;
 
-public final class DefaultLibraryService implements LibraryService {
+public final class DefaultCatalogService implements CatalogService {
 
-  public DefaultLibraryService(Dao<String, Book> dao) {
+  public DefaultCatalogService(Dao<String, Book> dao) {
     this.dao = checkNotNull(dao, "dao");
   }
 

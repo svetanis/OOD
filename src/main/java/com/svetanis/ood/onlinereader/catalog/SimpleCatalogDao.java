@@ -1,4 +1,4 @@
-package com.svetanis.ood.onlinereader.library;
+package com.svetanis.ood.onlinereader.catalog;
 
 import static com.google.common.collect.Maps.filterKeys;
 import static com.google.common.collect.Maps.newHashMap;
@@ -19,9 +19,9 @@ import com.google.common.collect.ImmutableMap;
 import com.svetanis.java.base.dao.Dao;
 import com.svetanis.ood.onlinereader.model.Book;
 
-public final class SimpleLibraryDao implements Dao<String, Book> {
+public final class SimpleCatalogDao implements Dao<String, Book> {
 
-  public SimpleLibraryDao() {
+  public SimpleCatalogDao() {
     this.map = newHashMap();
   }
 

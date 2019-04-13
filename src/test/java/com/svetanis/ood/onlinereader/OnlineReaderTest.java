@@ -16,8 +16,8 @@ import com.google.common.collect.ImmutableList;
 import com.svetanis.java.base.Pair;
 import com.svetanis.java.base.serialize.json.DefaultJsonSerializer;
 import com.svetanis.java.base.serialize.json.JsonSerializer;
-import com.svetanis.ood.onlinereader.library.LibraryService;
-import com.svetanis.ood.onlinereader.library.LibraryServiceProvider;
+import com.svetanis.ood.onlinereader.catalog.CatalogService;
+import com.svetanis.ood.onlinereader.catalog.CatalogServiceProvider;
 import com.svetanis.ood.onlinereader.model.Author;
 import com.svetanis.ood.onlinereader.model.Book;
 import com.svetanis.ood.onlinereader.search.SearchService;
@@ -32,7 +32,7 @@ public class OnlineReaderTest {
     try {
       List<Book> list = getBooks();
       List<Pair<String, Book>> pairs = transform(list, b -> Pair.build(b.getIsbn(), b));
-      LibraryService library = new LibraryServiceProvider().get();
+      CatalogService library = new CatalogServiceProvider().get();
       library.addAll(left(pairs), right(pairs));
       SearchService search = new SearchServiceProvider(library).get();
       List<Book> books = search.search(asList("java", "algorithms"));
