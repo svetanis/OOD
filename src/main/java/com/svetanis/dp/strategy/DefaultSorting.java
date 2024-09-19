@@ -16,6 +16,7 @@ public final class DefaultSorting implements Sorting {
 	public <C extends Comparable<C>> void sort(List<C> list) {
 		if (list.size() <= 1000) {
 			sort(new InsertionSort(), list);
+			return;
 		}
 		sort(new QuickSort(), list);
 	}
