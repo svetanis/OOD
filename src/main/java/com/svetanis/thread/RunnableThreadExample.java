@@ -2,7 +2,7 @@ package com.svetanis.thread;
 
 public final class RunnableThreadExample implements Runnable {
 
-	public int count = 0;
+	private int count = 0;
 
 	@Override
 	public void run() {

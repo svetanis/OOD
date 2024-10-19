@@ -2,7 +2,7 @@ package com.svetanis.thread;
 
 public final class ThreadExample extends Thread {
 
-	public int count = 0;
+	private int count = 0;
 
 	@Override
 	public void run() {
