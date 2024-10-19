@@ -30,8 +30,24 @@ public final class ThreadClient {
 		thread2.start();
 	}
 
+	// static methods synchronize on the class lock.
+	// two threads can't simultaneously execute synchronized
+	// static methods on the same class, even if one is calling
+	// foo and the other is calling bar
+	// Bar 1.foo() starting
+	// Bar 1.foo() ending
+	// Bar 2.bar() starting
+	// Bar 2.bar() ending
+	public static void staticReference() {
+		ThreadExampleStatic thread1 = new ThreadExampleStatic("1");
+		ThreadExampleStatic thread2 = new ThreadExampleStatic("2");
+		thread1.start();
+		thread2.start();
+	}
+
 	public static void main(String[] args) {
-		differentReferences();
+		staticReference();
 		sameReference();
+		differentReferences();
 	}
 }
