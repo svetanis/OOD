@@ -1,15 +1,16 @@
 package com.svetanis.thread.simplesync;
 
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public final class LockedAtm {
 
 	private int balance;
 	private Lock lock;
 
-	public LockedAtm(int balance, Lock lock) {
+	public LockedAtm(int balance) {
 		this.balance = balance;
-		this.lock = lock;
+		this.lock = new ReentrantLock();
 	}
 
 	public int withdraw(int value) {
