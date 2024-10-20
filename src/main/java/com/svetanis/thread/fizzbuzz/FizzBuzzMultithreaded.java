@@ -9,7 +9,7 @@ import java.util.List;
 import com.google.common.base.Predicate;
 import com.google.common.collect.ImmutableList;
 
-public final class FizzBuzzClient {
+public final class FizzBuzzMultithreaded {
 
 	public static void main(String[] args) {
 		int n = 100;
