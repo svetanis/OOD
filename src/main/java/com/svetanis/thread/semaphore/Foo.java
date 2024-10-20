@@ -1,4 +1,4 @@
-package com.svetanis.thread;
+package com.svetanis.thread.semaphore;
 
 import java.util.concurrent.Semaphore;
 

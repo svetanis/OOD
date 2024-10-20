@@ -1,4 +1,4 @@
-package com.svetanis.thread;
+package com.svetanis.thread.semaphore;
 
 // 1115. Print FooBar Alternately
 
