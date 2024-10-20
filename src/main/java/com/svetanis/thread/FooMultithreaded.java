@@ -1,16 +1,6 @@
 package com.svetanis.thread;
 
-// 1195. Fizz Buzz Multithreaded
-// given 4 functions:
-// printFizz, printBuzz, printFizzBuzz, printNumber
-// given an instance of the class FizzBuzz 
-// that has 4 function: fizz, buzz, fizzbuzz, number
-// the same instance of FizzBuzz will be passed 
-// to 4 different threads:
-// Thread A: calls fizz() that should output "fizz"
-// Thread B: calls buzz() that should output "buzz"
-// Thread C: calls fizzbuzz() that should output "fizzbuzz"
-// Thread D: calls number() that should only output integers
+// 1114. Print In Order
 
 public final class FooMultithreaded {
 
