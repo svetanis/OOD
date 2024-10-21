@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 
 import com.google.common.collect.ImmutableList;
 
-public final class ProducerConsumer {
+public final class LoadLeveling {
 
 	public static void main(String[] args) {
 		MessageQueue queue = new MessageQueue();
